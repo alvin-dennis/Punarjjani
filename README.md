@@ -12,10 +12,10 @@
 
 * **Frontend:** Nextjs
 * **Database:** *To be decided*
-* **UI Framework / Styling:** Tailwind
+* **UI Framework / Styling:** Tailwind CSS
 * **Deployment / Hosting:** Vercel
 
-## Features
+## Sections to be implemented
 
 - [ ] Hero Section
 - [ ] About Section
@@ -29,7 +29,7 @@
 
 1. Clone the repository
 2. Install dependencies: `bun install`
-3. Create `.env` with required environment variables ( Future Use)
+3. Create `.env` with required environment variables ( Donation Button )
 4. Run development server: `bun run dev`
 
 ## Folder Structure

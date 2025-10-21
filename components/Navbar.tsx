@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { navItems, ctaButton } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -15,8 +16,15 @@ export default function Navbar() {
     <div className="flex justify-center w-full py-6 px-4">
       <div className="flex items-center justify-between px-6 py-3 bg-white rounded-full shadow-lg w-full max-w-3xl relative z-10">
         <div className="flex items-center">
-          <Link href="/">
-            <h2 className="cursor-pointer text-xl">Punarjjani</h2>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/assets/logo.png"
+              alt="Punarjjani Logo"
+              width={120}
+              height={40}
+              className="h-10 w-auto md:h-12"
+              priority
+            />
           </Link>
         </div>
 

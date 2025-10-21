@@ -31,7 +31,7 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className="text-sm text-gray-900 hover:text-gray-600 transition-colors font-medium"
+                className="text-lg text-gray-900 hover:text-gray-600 transition-colors font-medium"
               >
                 {item.label}
               </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
               <X className="h-6 w-6 text-primary" />
             </motion.button>
 
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-6 items-center justify-center cursor-pointer">
               {navItems.map((item, i) => (
                 <motion.div
                   key={item.label}
@@ -93,7 +93,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="text-base text-gray-900 font-medium"
+                    className="text-2xl text-gray-900 font-medium"
                     onClick={toggleMenu}
                   >
                     {item.label}
@@ -111,7 +111,7 @@ export default function Navbar() {
                 <Link href={ctaButton.href} onClick={toggleMenu}>
                   <Button
                     variant={"default"}
-                    className="inline-flex items-center justify-center w-full px-5 py-3 text-base rounded-full transition-colors"
+                    className="inline-flex w-full px-5 py-3 text-base rounded-full transition-colors"
                   >
                     <span>{ctaButton.label}</span>
                   </Button>

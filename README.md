@@ -17,13 +17,13 @@
 
 ## Sections to be implemented
 
-- [ ] Hero Section
+- [x] Hero Section
 - [ ] About Section
 - [ ] Impact Section
-- [ ] Statistics Section
+- [x] Statistics Section
 - [ ] Team Section
 - [ ] Donate button with payment flow and Thank you pop-up
-- [ ] Footer with contact and legal information
+- [x] Footer with contact and legal information
 
 ## Getting Started
 

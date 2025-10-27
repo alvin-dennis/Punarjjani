@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { heroData } from "@/lib/data";
+import { hero } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
   const { title, subtitle, primaryButton, secondaryButton, programs } =
-    heroData;
+    hero;
 
   return (
     <section

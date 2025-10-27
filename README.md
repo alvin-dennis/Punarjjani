@@ -18,7 +18,7 @@
 ## Sections to be implemented
 
 - [x] Hero Section
-- [ ] About Section
+- [x] About Section
 - [ ] Impact Section
 - [x] Statistics Section
 - [x] Team Section (page available at `/team`)

@@ -1,47 +1,43 @@
 import Image from "next/image";
+import Link from "next/link";
+import { about } from "@/lib/data";
+import { VercelCard } from "@/components/ui/vercel-card";
 
 export default function About() {
-  const PRIMARY_BLUE = "text-[#2C55C0]";
-  const ACCENT_TEXT_COLOR = "text-[#0F172A]";
-  const BG_COLOR = "bg-white";
-
   return (
-    <section id="about" className={`py-20 ${BG_COLOR} ${ACCENT_TEXT_COLOR}`}>
+    <section id={about.sectionId} className="py-20 text-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          className={`text-4xl font-extrabold uppercase ${PRIMARY_BLUE} mb-16 text-center tracking-wider`}
-        >
-          Our Vision: The Punarjani Mission
+        <h2 className="text-4xl font-extrabold uppercase text-primary mb-16 text-center tracking-wider">
+          {about.heading}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <h3 className={`text-3xl font-bold mb-4 ${ACCENT_TEXT_COLOR}`}>
-              A New Beginning Through Collaboration
+            <h3 className="text-3xl font-bold mb-4 text-accent text-center">
+              {about.subHeading}
             </h3>
-            <p className="mt-4 text-lg leading-relaxed text-gray-700">
-              **Punarjani**, which translates to &quot;rebirth&quot; or
-              &quot;rejuvenation&quot;, is a community-driven initiative built
-              on the belief that local resources and volunteer commitment can
-              drive profound transformation.
-            </p>
-            <p className="mt-6 text-lg leading-relaxed font-semibold text-gray-700">
-              Today, we are a transparent, tech-enabled platform where we
-              focuses on providing compassionate medical care to those in need —
-              supporting underprivileged communities with essential healthcare,
-              and restoring hope and dignity to vulnerable lives.
-            </p>
 
-            <a
-              href="#team"
-              className="mt-8 inline-block font-bold text-[#2563EB] hover:underline transition duration-300"
+            {about.paragraphs.map((p, idx) => (
+              <p
+                key={idx}
+                className="mt-4 text-lg leading-relaxed text-gray-700"
+              >
+                {p}
+              </p>
+            ))}
+
+            <Link
+              href={about.cta.href}
+              className="mt-8 inline-block font-bold text-gray-700 hover:underline transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              Meet Our Team of Collaborators &rarr;
-            </a>
+              {about.cta.label}
+            </Link>
           </div>
-
           <div className="md:pl-8 flex items-center justify-center">
-            <div className="w-full max-w-sm mx-auto p-8 bg-muted rounded-xl shadow-sm flex flex-col items-center justify-center border border-gray-300">
+            <VercelCard
+              className="w-full max-w-sm mx-auto p-8 flex flex-col items-center justify-center"
+              animateOnHover
+            >
               <Image
                 src="/assets/logo.png"
                 alt="Punarjani Project Logo - Symbol of Rebirth"
@@ -53,10 +49,10 @@ export default function About() {
               <p className="text-gray-600 text-center font-semibold mt-4">
                 Our symbol of collective rejuvenation.
               </p>
-            </div>
+            </VercelCard>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}

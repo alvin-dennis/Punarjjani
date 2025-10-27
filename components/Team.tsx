@@ -1,17 +1,16 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
-import { teamMembers } from "@/lib/data";
-import { TeamMember } from "@/lib/types";
+import Link from "next/link";
+import { team } from "@/lib/data";
+import { Member } from "@/lib/types";
+import { VercelCard } from "@/components/ui/vercel-card";
 
-function MemberCard({ member }: { member: TeamMember }) {
+function MemberCard({ member }: { member: Member }) {
   return (
-    <article
-      className="rounded-2xl shadow-sm p-6 flex flex-col items-center text-center"
-      style={{ backgroundColor: "var(--card)", color: "var(--card-foreground)" }}
+    <VercelCard
+      className="p-6 flex flex-col items-center text-center"
+      animateOnHover
     >
-      <div className="w-28 h-28 rounded-full overflow-hidden mb-4 ring-2 ring-offset-2" style={{ boxShadow: "0 6px 18px rgba(44,85,192,0.08)" }}>
+      <div className="w-30 h-28 rounded-full overflow-hidden mb-4 ring-2 ring-offset-2">
         <Image
           src={member.image || "https://placehold.co/400x400"}
           alt={member.name}
@@ -22,47 +21,41 @@ function MemberCard({ member }: { member: TeamMember }) {
         />
       </div>
 
-      <h3 className="text-lg font-nura font-semibold" style={{ color: "var(--color-foreground)" }}>
-        {member.name}
-      </h3>
-      <p className="text-sm mt-1" style={{ color: "var(--muted-foreground)" }}>{member.role}</p>
-      {member.bio && (
-        <p className="mt-3 text-sm" style={{ color: "var(--muted-foreground)" }}>{member.bio}</p>
-      )}
+      <h3 className="text-lg font-semibold">{member.name}</h3>
+      <p className="text-sm mt-1">{member.role}</p>
+      {member.bio && <p className="mt-3 text-sm">{member.bio}</p>}
 
-      <div className="mt-4 flex items-center gap-4">
+      <div className="mt-4 flex items-center gap-4 z-10">
         {member.email && (
-          <a
+          <Link
             href={`mailto:${member.email}`}
             className="text-sm hover:underline"
-            style={{ color: "var(--color-primary)" }}
           >
             Email
-          </a>
+          </Link>
         )}
         {member.linkedin && (
-          <a
+          <Link
             href={member.linkedin}
             target="_blank"
             rel="noreferrer"
             className="text-sm hover:underline"
-            style={{ color: "var(--color-primary)" }}
           >
             LinkedIn
-          </a>
+          </Link>
         )}
       </div>
-    </article>
+    </VercelCard>
   );
 }
 
-export default function Team({ members = teamMembers }: { members?: TeamMember[] }) {
+export default function Team({ members = team }: { members?: Member[] }) {
   return (
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-nura font-bold" style={{ color: "var(--color-foreground)" }}>Our Team</h2>
-          <p className="mt-2 max-w-2xl mx-auto" style={{ color: "var(--muted-foreground)" }}>
+          <h2 className="text-3xl md:text-4xl font-nura font-bold">Our Team</h2>
+          <p className="mt-2 max-w-2xl mx-auto">
             A small team of passionate professionals working together to make a
             difference in people's lives.
           </p>

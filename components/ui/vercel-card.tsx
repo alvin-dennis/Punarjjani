@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 

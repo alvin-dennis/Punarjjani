@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import "@/app/globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,11 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <section>
-        <Navbar />
-        <Toaster position="top-center" richColors />
-        {children}
-        <Footer />
-      </section>
+    <section>
+      <Toaster position="top-center" richColors />
+      {children}
+    </section>
   );
 }

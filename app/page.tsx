@@ -1,10 +1,12 @@
 "use client";
-import { Hero } from "@/components/Hero";
+
 import Navbar from "@/components/Navbar";
-import Statistics from "@/components/Statistics";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Initiatives from "@/components/Initiatives";
+import Statistics from "@/components/Stats";
 import Footer from "@/components/Footer";
-import About from '@/components/About';
-import InitiativesSection from "@/components/InitiativesSection";
+
 
 export default function Home() {
   return (
@@ -12,8 +14,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Initiatives />
       <Statistics />
-      <InitiativesSection />
       <Footer />
     </>
   );

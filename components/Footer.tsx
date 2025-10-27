@@ -10,6 +10,7 @@ export default function Footer() {
 
     return (
       <footer
+        id="#footer"
         className="border-t border-slate-900 rounded-t-4xl mt-16"
         aria-labelledby="footer-heading"
       >

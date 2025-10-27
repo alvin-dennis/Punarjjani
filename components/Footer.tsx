@@ -12,10 +12,7 @@ export default function Footer() {
         <div className="md:flex md:items-start md:justify-between">
           <div className="mb-8 md:mb-0">
             <Link href="/">
-              <h3
-                className="inline-block text-xl font-bold"
-                style={{ color: "var(--color-primary)" }}
-              >
+              <h3 className="inline-block text-xl font-bold text-primary">
                 Punarjjani
               </h3>
             </Link>
@@ -75,20 +72,32 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t pt-6 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
+          <div className="text-center flex items-center gap-1 order-3 sm:order-2">
+            Designed & Developed by{" "}
+            <Link
+              href="https://mulearn.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              µLearn Community
+            </Link>
+          </div>
+          
+          <div className="flex items-center gap-4 order-2 sm:order-1">
             © {new Date().getFullYear()} Punarjjani. All rights reserved.
           </div>
 
-          <div className="text-right flex items-center gap-4">
+          <div className="text-right flex items-center gap-4 order-1 sm:order-3">
             {footer.socials.map((s) => (
-              <a
+              <Link
                 key={s.label}
                 href={s.href}
                 aria-label={s.ariaLabel}
                 className="hover:text-slate-700"
               >
                 {s.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

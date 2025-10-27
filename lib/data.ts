@@ -55,7 +55,6 @@ export const hero = {
 };
 
 export const about = {
-  sectionId: "about",
   heading: "Our Vision: The Punarjani Mission",
   subHeading: "A New Beginning Through Collaboration",
   paragraphs: [
@@ -73,49 +72,49 @@ export const initiatives = [
   {
     id: 1,
     title: "Palliative Care Wing (Arikil)",
-    imageSrc: "/assets/initiatives/img_1.jpg",
+    imageSrc: "/assets/initiatives/arikil.svg",
     description:
       "Providing compassionate, holistic care for patients and their families facing serious illness.",
   },
   {
     id: 2,
     title: "Paediatrics",
-    imageSrc: "/assets/initiatives/img_2.jpg",
+    imageSrc: "/assets/initiatives/paediatrics.svg",
     description:
       "Dedicated support for children and young patients, ensuring access to essential medical services.",
   },
   {
     id: 3,
     title: "Blood Wing",
-    imageSrc: "/assets/initiatives/img_3.jpg",
+    imageSrc: "/assets/initiatives/blood-wing.svg",
     description:
       "Organizing and streamlining voluntary blood donation to maintain a reliable blood supply.",
   },
   {
     id: 4,
     title: "Drug Wing",
-    imageSrc: "/assets/initiatives/img_4.jpg",
+    imageSrc: "/assets/initiatives/drug-wing.svg",
     description:
       "Assisting underprivileged patients by funding access to necessary and often expensive medications.",
   },
   {
     id: 5,
     title: "Gift of Giving",
-    imageSrc: "/assets/initiatives/img_5.jpg",
+    imageSrc: "/assets/initiatives/gog.svg",
     description:
       "General fundraising and support to meet diverse emergency medical and institutional needs.",
   },
   {
     id: 6,
     title: "Hair 2 Care",
-    imageSrc: "/assets/initiatives/img_6.jpg",
+    imageSrc: "/assets/initiatives/hair2care.svg",
     description:
       "Providing emotional and physical support for patients, often through specialized care projects.",
   },
   {
     id: 7,
     title: "Feathers",
-    imageSrc: "/assets/initiatives/img_7.jpg",
+    imageSrc: "/assets/initiatives/feathers.svg",
     description:
       "A unique welfare program focused on restoring the dignity and hope of vulnerable patients.",
   },

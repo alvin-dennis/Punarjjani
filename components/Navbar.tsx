@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center">
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo.svg"
               alt="Punarjjani Logo"
               width={120}
               height={40}

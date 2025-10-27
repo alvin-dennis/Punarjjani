@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 justify-center lg:justify-start">
             <Link href="/">
               <Image
-                src="/assets/logo.png"
+                src="/assets/logo.svg"
                 alt="Punarjjani Logo"
                 width={32}
                 height={32}

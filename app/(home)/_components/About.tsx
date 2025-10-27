@@ -5,7 +5,7 @@ import { VercelCard } from "@/components/ui/vercel-card";
 
 export default function About() {
   return (
-    <section id={about.sectionId} className="py-20 text-accent">
+    <section id="#about" className="py-20 text-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-extrabold uppercase text-primary mb-16 text-center tracking-wider">
           {about.heading}
@@ -39,7 +39,7 @@ export default function About() {
               animateOnHover
             >
               <Image
-                src="/assets/logo.png"
+                src="/assets/logo.svg"
                 alt="Punarjani Project Logo - Symbol of Rebirth"
                 width={250}
                 height={250}

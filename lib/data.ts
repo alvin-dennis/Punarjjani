@@ -1,4 +1,5 @@
-import { NavItem, Stat } from "@/lib/types";
+import { NavItem, Stat, Social } from "@/lib/types";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
@@ -9,7 +10,7 @@ export const navItems: NavItem[] = [
 
 export const ctaButton: NavItem = {
   label: "Donate",
-  href: "#get-started",
+  href: "/donate",
 };
 
 export const hero = {
@@ -167,21 +168,42 @@ export const team = [
 ];
 
 export const footer = {
-  navigation: [
-    { label: "About", href: "#about" },
-    { label: "Impact", href: "#impact" },
-    { label: "Team", href: "/team" },
-    { label: "Donate", href: "/donate" },
-  ],
-  legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Use", href: "/terms" },
-    { label: "Donation Policy", href: "/donation-policy" },
-    { label: "Refund Policy", href: "/refund-policy" },
-  ],
   socials: [
-    { label: "Instagram", href: "#", ariaLabel: "Instagram" },
-    { label: "LinkedIn", href: "#", ariaLabel: "LinkedIn" },
-    { label: "YouTube", href: "#", ariaLabel: "YouTube" },
+    { label: "Facebook", href: "#", icon: FaFacebook },
+    { label: "Instagram", href: "#", icon: FaInstagram },
+    { label: "LinkedIn", href: "#", icon: FaLinkedin },
+  ] as Social[],
+  sections: [
+    {
+      title: "Navigation",
+      links: [
+        { name: "About", href: "#about" },
+        { name: "Initiatives", href: "#initiatives" },
+        { name: "Impact", href: "#impact" },
+        { name: "Team", href: "#team" },
+        { name: "Donate", href: "/donate" },
+      ],
+    },
+    {
+      title: "Initiatives",
+      links: [
+        { name: "Palliative Care Wing", href: "#initiatives" },
+        { name: "Blood Wing", href: "#initiatives" },
+        { name: "Paediatrics", href: "#initiatives" },
+        { name: "Drug Wing", href: "#initiatives" },
+        { name: "Gift of Giving", href: "#initiatives" },
+        { name: "Hair 2 Care", href: "#initiatives" },
+        { name: "Feathers", href: "#initiatives" },
+      ],
+    },
+    {
+      title: "Legal",
+      links: [
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Use", href: "/terms" },
+        { name: "Donation Policy", href: "/donation-policy" },
+        { name: "Refund Policy", href: "/refund-policy" },
+      ],
+    },
   ],
 };

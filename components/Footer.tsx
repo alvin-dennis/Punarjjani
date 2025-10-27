@@ -1,106 +1,79 @@
-import Link from "next/link";
 import { footer } from "@/lib/data";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer
-      id="footer"
-      className="border-t border-slate-900 rounded-t-4xl mt-16"
-      aria-labelledby="footer-heading"
-    >
-      <div className="max-w-full mx-auto px-6 py-12">
-        <div className="md:flex md:items-start md:justify-between">
-          <div className="mb-8 md:mb-0">
+    <footer className="container w-full mx-auto text-center">
+      <div className="flex w-full flex-col justify-center gap-10 lg:flex-row lg:items-start lg:text-left">
+        <div className="flex w-full flex-col items-center justify-center gap-6 lg:items-start lg:justify-start">
+          <div className="flex items-center gap-2 justify-center lg:justify-start">
             <Link href="/">
-              <h3 className="inline-block text-xl font-bold text-primary">
-                Punarjjani
-              </h3>
+              <Image
+                src="/assets/logo.png"
+                alt="Punarjjani Logo"
+                width={32}
+                height={32}
+                className="h-8 w-auto"
+              />
             </Link>
-            <p className="mt-3 max-w-xs text-sm text-slate-600">
-              Providing compassionate medical care to those in need — supporting
-              underprivileged communities with essential healthcare, and
-              restoring hope and dignity to vulnerable lives.
-            </p>
-            <div className="mt-4 flex gap-3 flex-wrap items-center">
-              <a
-                href="mailto:hello@punarjjani.org"
-                className="text-sm hover:underline"
-              >
-                mail id
-              </a>
-              <span className="text-sm text-slate-400">·</span>
-              <a href="tel:+918330025044" className="text-sm hover:underline">
-                +91 phone number
-              </a>
-              <div className="text-sm text-slate-400">
-                Registered charity number: 1234567
-              </div>
-            </div>
+            <h2 className="text-xl font-semibold text-primary">Punarjjani</h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-            <div>
-              <h3 className="text-sm font-semibold mb-3 text-slate-700">
-                Explore
-              </h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                {footer.navigation.map((n) => (
-                  <li key={n.href}>
-                    <Link href={n.href} className="hover:underline">
-                      {n.label}
-                    </Link>
+          <p className="max-w-[70%] text-sm text-muted-foreground text-center lg:text-left">
+            Providing compassionate medical care to those in need — supporting
+            underprivileged communities with essential healthcare, and restoring
+            hope and dignity to vulnerable lives.
+          </p>
+
+          <p className="text-sm font-semibold text-muted-foreground mt-4">
+            Connect with us
+          </p>
+          <ul className="flex items-center justify-center space-x-6 text-muted-foreground">
+            {footer.socials.map((social, idx) => {
+              const Icon = social.icon;
+              return (
+                <li key={idx} className="font-medium hover:text-primary">
+                  <Link href={social.href} aria-label={social.label}>
+                    <Icon className="h-6 w-6" />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="grid w-full gap-6 text-center md:grid-cols-3 lg:text-left lg:gap-20">
+          {footer.sections.map((section, idx) => (
+            <div key={idx}>
+              <h3 className="mb-4 font-bold text-accent">{section.title}</h3>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                {section.links.map((link, linkIdx) => (
+                  <li key={linkIdx} className="font-medium hover:text-primary">
+                    <a href={link.href}>{link.name}</a>
                   </li>
                 ))}
               </ul>
             </div>
-
-            <div>
-              <h3 className="text-sm font-semibold mb-3 text-slate-700">
-                Legal
-              </h3>
-              <ul className="space-y-2 text-sm text-slate-600">
-                {footer.legal.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="hover:underline">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
 
-        <div className="mt-8 border-t pt-6 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center flex items-center gap-1 order-3 sm:order-2">
-            Designed & Developed by{" "}
-            <Link
-              href="https://mulearn.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              µLearn Community
-            </Link>
-          </div>
-          
-          <div className="flex items-center gap-4 order-2 sm:order-1">
-            © {new Date().getFullYear()} Punarjjani. All rights reserved.
-          </div>
-
-          <div className="text-right flex items-center gap-4 order-1 sm:order-3">
-            {footer.socials.map((s) => (
-              <Link
-                key={s.label}
-                href={s.href}
-                aria-label={s.ariaLabel}
-                className="hover:text-slate-700"
-              >
-                {s.label}
-              </Link>
-            ))}
-          </div>
-        </div>
+      <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <p className="order-2 lg:order-1 text-center">
+          © {new Date().getFullYear()} Punarjjani. All rights reserved.
+        </p>
+        <p className="order-1 flex flex-col gap-2 text-center md:order-2 md:flex-row md:text-left lg:text-right">
+          Designed & Developed by{""}
+          <Link
+            href="https://mulearn.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            µLearn Community
+          </Link>
+        </p>
       </div>
     </footer>
   );

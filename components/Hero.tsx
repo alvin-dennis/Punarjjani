@@ -21,13 +21,10 @@ export default function Hero() {
       aria-label="Hero section"
     >
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="flex flex-col items-center max-w-4xl gap-8"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight">
             {title}
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl">
@@ -35,10 +32,7 @@ export default function Hero() {
           </p>
 
           {(primaryButton || secondaryButton) && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
               className="flex flex-col sm:flex-row items-center gap-4"
             >
               {primaryButton && (
@@ -62,16 +56,12 @@ export default function Hero() {
                   </Button>
                 </Link>
               )}
-            </motion.div>
+            </div>
           )}
-        </motion.div>
+        </div>
       </div>
 
-      {programs.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+        <div
           className="relative z-10 w-full py-16 overflow-hidden"
         >
           <motion.div
@@ -115,8 +105,7 @@ export default function Hero() {
               </motion.div>
             ))}
           </motion.div>
-        </motion.div>
-      )}
+        </div>
     </section>
   );
 }

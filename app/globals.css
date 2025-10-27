@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --primary-blue: #2C55C0;
   --primary-blue-foreground: #faf9f6;
@@ -87,40 +85,6 @@
   --foreground: #0F172A;
 }
 
-.dark {
-  --background: #0F172A;
-  --foreground: #faf9f6;
-  --card: #2C55C0;
-  --card-foreground: #faf9f6;
-  --popover: #2C55C0;
-  --popover-foreground: #faf9f6;
-  --primary: #2563EB;
-  --primary-foreground: #faf9f6;
-  --secondary: #3B82F6;
-  --secondary-foreground: #faf9f6;
-  --muted: #1E293B;
-  --muted-foreground: #faf9f6;
-  --accent: #2563EB;
-  --accent-foreground: #faf9f6;
-  --destructive: #EF4444;
-  --border: #334155;
-  --input: #1E293B;
-  --ring: #2563EB;
-  --chart-1: #2563EB;
-  --chart-2: #3B82F6;
-  --chart-3: #60A5FA;
-  --chart-4: #93C5FD;
-  --chart-5: #BFDBFE;
-  --sidebar: #2C55C0;
-  --sidebar-foreground: #faf9f6;
-  --sidebar-primary: #2563EB;
-  --sidebar-primary-foreground: #faf9f6;
-  --sidebar-accent: #3B82F6;
-  --sidebar-accent-foreground: #faf9f6;
-  --sidebar-border: #334155;
-  --sidebar-ring: #2563EB;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -144,4 +108,10 @@
   h6{
     font-family: var(--font-nura);
   }
+}
+
+html,
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
 }

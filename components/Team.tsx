@@ -21,7 +21,7 @@ function MemberCard({ member }: { member: Member }) {
         />
       </div>
 
-      <h3 className="text-lg font-semibold">{member.name}</h3>
+      <h3 className="text-lg font-semibold text-accent">{member.name}</h3>
       <p className="text-sm mt-1">{member.role}</p>
       {member.bio && <p className="mt-3 text-sm">{member.bio}</p>}
 
@@ -54,7 +54,7 @@ export default function Team({ members = team }: { members?: Member[] }) {
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-nura font-bold">Our Team</h2>
+          <h2 className="text-3xl md:text-4xl text-primary font-bold">Our Team</h2>
           <p className="mt-2 max-w-2xl mx-auto">
             A small team of passionate professionals working together to make a
             difference in people's lives.

@@ -22,7 +22,7 @@ export default function Stats() {
                   duration={10}
                   separator=","
                   decimals={s.id === 2 ? 1 : 0}
-                  suffix={s.id === 2 ? "Lakh" : ""}
+                  suffix={s.id === 2 ? "L" : ""}
                 />
               </div>
               <div className="mt-2 text-sm font-medium text-slate-600">

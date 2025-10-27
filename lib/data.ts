@@ -73,50 +73,51 @@ export const initiatives = [
   {
     id: 1,
     title: "Palliative Care Wing (Arikil)",
-    imageSrc: "/assets/initiatives/arikil.svg",
+    imageSrc: "/assets/initiatives/arikil.png",
     description:
       "This wing focuses on holistic approach by providing comfort and supporting the physical, emotional and spitirual needs of the patient and their families to improve their quality of life.",
   },
   {
     id: 2,
     title: "Paediatrics",
-    imageSrc: "/assets/initiatives/paediatrics.svg",
-    description: "This wing aims to nurture the physical, emotional and developmental well-being of every child in distress by reminding them that they are not alone in the world.",
+    imageSrc: "/assets/initiatives/paediatrics.png",
+    description:
+      "This wing aims to nurture the physical, emotional and developmental well-being of every child in distress by reminding them that they are not alone in the world.",
   },
   {
     id: 3,
     title: "Blood Wing",
-    imageSrc: "/assets/initiatives/blood-wing.svg",
+    imageSrc: "/assets/initiatives/blood-wing.png",
     description:
       "Through education, motivation and mobilization of healthy blood donors, the blood wing bridges the gap between the blood donors and the recepients.",
   },
   {
     id: 4,
     title: "Drug Wing",
-    imageSrc: "/assets/initiatives/drug-wing.svg",
+    imageSrc: "/assets/initiatives/drug-wing.png",
     description:
       "This wing ensures that the medicines are available for underpriviledged patients at free of cost.",
   },
   {
     id: 5,
     title: "Gift of Giving",
-    imageSrc: "/assets/initiatives/gog.svg",
+    imageSrc: "/assets/initiatives/gog.png",
     description:
       "This wing facilitates and motivates individuals to include the needy patients in the celebrations of their special occasions like birthdays with their generous contributions.",
   },
   {
     id: 6,
     title: "Hair 2 Care",
-    imageSrc: "/assets/initiatives/hair2care.svg",
+    imageSrc: "/assets/initiatives/hair2care.png",
     description:
-      "This wind has, and will continue to elevate the quality of life of warriors fighting with cancer by providing wigs free of cost with the hairs procured through voluntary hair donations.",
+      "This wing has, and will continue to elevate the quality of life of warriors fighting with cancer by providing wigs free of cost with the hairs procured through voluntary hair donations.",
   },
   {
     id: 7,
     title: "Feathers",
-    imageSrc: "/assets/initiatives/feathers.svg",
+    imageSrc: "/assets/initiatives/feathers.png",
     description:
-      "This wing ains to provide essential clothing and garments to emergency and underpriviledged patients.",
+      "This wing aims to provide essential clothing and garments to emergency and underpriviledged patients.",
   },
 ];
 

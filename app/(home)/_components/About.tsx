@@ -20,7 +20,7 @@ export default function About() {
             {about.paragraphs.map((p, idx) => (
               <p
                 key={idx}
-                className="mt-4 text-lg leading-relaxed text-gray-700"
+                className="mt-4 text-lg text-justify leading-relaxed text-gray-700"
               >
                 {p}
               </p>
@@ -44,6 +44,7 @@ export default function About() {
                 width={250}
                 height={250}
                 className="object-contain"
+                sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 208px"
                 priority
               />
               <p className="text-gray-600 text-center font-semibold mt-4">

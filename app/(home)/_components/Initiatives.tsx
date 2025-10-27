@@ -26,6 +26,7 @@ export default function Initiatives() {
                   className="object-contain"
                   width={200}
                   height={200}
+                  sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 192px"
                   priority
                 />
               </div>
@@ -33,7 +34,7 @@ export default function Initiatives() {
               <h3 className="text-xl font-bold text-accent mb-2">
                 {project.title}
               </h3>
-              <p className="text-gray-600 grow text-base">
+              <p className="text-gray-600 text-justify grow text-base">
                 {project.description}
               </p>
             </VercelCard>

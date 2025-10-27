@@ -1,5 +1,3 @@
-"use client";
-
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { BlurFade } from "@/components/ui/blur-fade";
 import Hero from "@/app/(home)/_components/Hero";

@@ -52,14 +52,15 @@ export const hero = {
       title: "Placeholder",
     },
   ],
+  backgroundImage: "/assets/home/hero.webp",
 };
 
 export const about = {
   heading: "Our Vision: The Punarjani Mission",
   subHeading: "A New Beginning Through Collaboration",
   paragraphs: [
-    "Punarjani, which translates to \"rebirth\" or \"rejuvenation\", is a community-driven initiative built on the belief that local resources and volunteer commitment can drive profound transformation.",
-    "Today, we are a transparent, tech-enabled platform that focuses on providing compassionate medical care to those in need — supporting underprivileged communities with essential healthcare, and restoring hope and dignity to vulnerable lives."
+    "PUNARJJANI is a charitable initiative under Students of Government Medical College Thrissur, dedicated to providing medical care and support to underprivileged patients. Rooted in the values of compassion and the spirit of the Hippocratic Oath, it brings together doctors, students, and volunteers to restore health, dignity, and hope to those in need." ,
+    "The name “Punarjjani,” meaning “rebirth,” reflects its mission of giving individuals a second chance at life. By bridging the gap in healthcare access, Punarjjani stands as a symbol of unity, service, and humanity."
   ],
   cta: {
     href: "#team",
@@ -74,57 +75,56 @@ export const initiatives = [
     title: "Palliative Care Wing (Arikil)",
     imageSrc: "/assets/initiatives/arikil.svg",
     description:
-      "Providing compassionate, holistic care for patients and their families facing serious illness.",
+      "This wing focuses on holistic approach by providing comfort and supporting the physical, emotional and spitirual needs of the patient and their families to improve their quality of life.",
   },
   {
     id: 2,
     title: "Paediatrics",
     imageSrc: "/assets/initiatives/paediatrics.svg",
-    description:
-      "Dedicated support for children and young patients, ensuring access to essential medical services.",
+    description: "This wing aims to nurture the physical, emotional and developmental well-being of every child in distress by reminding them that they are not alone in the world.",
   },
   {
     id: 3,
     title: "Blood Wing",
     imageSrc: "/assets/initiatives/blood-wing.svg",
     description:
-      "Organizing and streamlining voluntary blood donation to maintain a reliable blood supply.",
+      "Through education, motivation and mobilization of healthy blood donors, the blood wing bridges the gap between the blood donors and the recepients.",
   },
   {
     id: 4,
     title: "Drug Wing",
     imageSrc: "/assets/initiatives/drug-wing.svg",
     description:
-      "Assisting underprivileged patients by funding access to necessary and often expensive medications.",
+      "This wing ensures that the medicines are available for underpriviledged patients at free of cost.",
   },
   {
     id: 5,
     title: "Gift of Giving",
     imageSrc: "/assets/initiatives/gog.svg",
     description:
-      "General fundraising and support to meet diverse emergency medical and institutional needs.",
+      "This wing facilitates and motivates individuals to include the needy patients in the celebrations of their special occasions like birthdays with their generous contributions.",
   },
   {
     id: 6,
     title: "Hair 2 Care",
     imageSrc: "/assets/initiatives/hair2care.svg",
     description:
-      "Providing emotional and physical support for patients, often through specialized care projects.",
+      "This wind has, and will continue to elevate the quality of life of warriors fighting with cancer by providing wigs free of cost with the hairs procured through voluntary hair donations.",
   },
   {
     id: 7,
     title: "Feathers",
     imageSrc: "/assets/initiatives/feathers.svg",
     description:
-      "A unique welfare program focused on restoring the dignity and hope of vulnerable patients.",
+      "This wing ains to provide essential clothing and garments to emergency and underpriviledged patients.",
   },
 ];
 
 
 export const stats: Stat[] = [
-    { id: 1, value: 1500, label: "Active Users", sub: "Last 30 days" },
-    { id: 2, value: 320, label: "Projects Completed" },
-    { id: 3, value: 98, label: "Client Satisfaction", sub: "In %" },
+    { id: 1, value: 22, label: "Years of dedicated service" },
+    { id: 2, value: 450000, label: "worth of annual medical and charitable services" },
+    { id: 3, value: 15, label: "medical camps providing free medical care and awareness" },
 ];
   
 export const team = [
@@ -168,9 +168,16 @@ export const team = [
 
 export const footer = {
   socials: [
-    { label: "Facebook", href: "#", icon: FaFacebook },
-    { label: "Instagram", href: "#", icon: FaInstagram },
-    { label: "LinkedIn", href: "#", icon: FaLinkedin },
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/PratheekshaTMC",
+      icon: FaFacebook,
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/punarjjani_tmc",
+      icon: FaInstagram,
+    },
   ] as Social[],
   sections: [
     {

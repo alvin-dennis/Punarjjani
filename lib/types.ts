@@ -19,7 +19,6 @@ export type Stat = {
   id: string | number;
   value: number;
   label: string;
-  sub?: string;
 };
 
 export interface Social {

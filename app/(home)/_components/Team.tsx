@@ -17,13 +17,14 @@ function MemberCard({ member }: { member: Member }) {
           width={400}
           height={400}
           className="w-full h-full object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
           unoptimized
         />
       </div>
 
       <h3 className="text-lg font-semibold text-accent">{member.name}</h3>
       <p className="text-sm mt-1">{member.role}</p>
-      {member.bio && <p className="mt-3 text-sm">{member.bio}</p>}
+      {member.bio && <p className="mt-3 text-sm text-center">{member.bio}</p>}
 
       <div className="mt-4 flex items-center gap-4 z-10">
         {member.email && (

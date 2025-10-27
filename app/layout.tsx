@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`{${montserrat.className} ${nura.variable} font-monteserrat antialiased bg-muted`}
+        className={`${montserrat.className} ${nura.variable} font-monteserrat antialiased bg-muted`}
       >
           {children}
       </body>

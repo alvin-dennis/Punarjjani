@@ -4,7 +4,7 @@ export const navItems: NavItem[] = [
   { label: "About", href: "#" },
   { label: "Impact", href: "#pricing" },
   { label: "Statistics", href: "#docs" },
-  { label: "Team", href: "#projects" },
+  { label: "Team", href: "/team" },
 ];
 
 export const ctaButton: NavItem = {
@@ -52,3 +52,42 @@ export const heroData = {
     },
   ],
 };
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Dr. Ananya Rao",
+    role: "Medical Director",
+    bio: "Over 12 years of experience in community health programs, leading clinical teams and trainings.",
+    image: "https://placehold.co/400x400",
+    linkedin: "https://www.linkedin.com/",
+    email: "ananya@punarjjani.org",
+  },
+  {
+    id: 2,
+    name: "Rahul Sharma",
+    role: "Program Manager",
+    bio: "Coordinates outreach and logistics for mobile clinics and community drives.",
+    image: "https://placehold.co/400x400",
+    linkedin: "https://www.linkedin.com/",
+    email: "rahul@punarjjani.org",
+  },
+  {
+    id: 3,
+    name: "Ms. Latha Iyer",
+    role: "Volunteer Coordinator",
+    bio: "Builds and supports our volunteer network with training and resource allocation.",
+    image: "https://placehold.co/400x400",
+    linkedin: "https://www.linkedin.com/",
+    email: "latha@punarjjani.org",
+  },
+  {
+    id: 4,
+    name: "Amit Verma",
+    role: "Fundraising Lead",
+    bio: "Leads donor relations and fundraising initiatives to sustain our programs.",
+    image: "https://placehold.co/400x400",
+    linkedin: "https://www.linkedin.com/",
+    email: "amit@punarjjani.org",
+  },
+];

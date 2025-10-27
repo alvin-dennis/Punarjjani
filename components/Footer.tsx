@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 export default function Footer() {
-    const navigation = [
-        { label: "About", href: "#about" },
-        { label: "Impact", href: "#impact" },
-        { label: "Team", href: "#team" },
-        { label: "Donate", href: "/donate" },
-    ];
+  const navigation = [
+    { label: "About", href: "#about" },
+    { label: "Impact", href: "#impact" },
+    { label: "Team", href: "/team" },
+    { label: "Donate", href: "/donate" },
+  ];
 
     return (
       <footer

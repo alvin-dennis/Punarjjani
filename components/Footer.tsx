@@ -50,7 +50,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-muted-foreground">
                 {section.links.map((link, linkIdx) => (
                   <li key={linkIdx} className="font-medium hover:text-primary">
-                    <a href={link.href}>{link.name}</a>
+                    <Link href={link.href}>{link.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -64,7 +64,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Punarjjani. All rights reserved.
         </p>
         <p className="order-1 flex flex-col gap-2 text-center md:order-2 md:flex-row md:text-left lg:text-right">
-          Designed & Developed by{""}
+          Designed & Developed by
           <Link
             href="https://mulearn.org"
             target="_blank"

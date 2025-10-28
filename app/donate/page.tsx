@@ -12,7 +12,9 @@ export default function Donate() {
             Help us sustain Our <span className="text-primary">Mission</span>
           </h1>
           <p className="mt-4 text-sm sm:text-base text-muted-foreground">
-            Lorem ipsum
+            Providing compassionate medical care to those in need — supporting
+            underprivileged communities with essential healthcare, and restoring
+            hope and dignity to vulnerable lives.
           </p>
         </div>
       </BlurFade>

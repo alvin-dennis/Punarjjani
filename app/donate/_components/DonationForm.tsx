@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 type DonationType = "one-time" | "monthly" | "yearly";
 
@@ -107,27 +108,27 @@ export default function DonationForm() {
     switch (type) {
       case "monthly":
         return [
-          { id: "amount-10000", label: "₹10,000", amount: 10000 },
-          { id: "amount-25000", label: "₹25,000", amount: 25000 },
-          { id: "amount-50000", label: "₹50,000", amount: 50000 },
-          { id: "amount-100000", label: "₹1,00,000", amount: 100000 },
+          { id: "amount-500", label: "₹500", amount: 500 },
+          { id: "amount-1000", label: "₹1000", amount: 1000 },
+          { id: "amount-2000", label: "₹2000", amount: 2000 },
+          { id: "amount-5000", label: "₹5000", amount: 5000 },
           { id: "amount-custom", label: "Custom Amount", isCustom: true },
         ];
       case "yearly":
         return [
-          { id: "amount-100000", label: "₹1,00,000", amount: 100000 },
-          { id: "amount-500000", label: "₹5,00,000", amount: 500000 },
-          { id: "amount-1000000", label: "₹10,00,000", amount: 1000000 },
-          { id: "amount-2500000", label: "₹25,00,000", amount: 2500000 },
+          { id: "amount-2000", label: "₹2000", amount: 2000 },
+          { id: "amount-3000", label: "₹3000", amount: 3000 },
+          { id: "amount-5000", label: "₹5000", amount: 5000 },
+          { id: "amount-10000", label: "₹10,000", amount: 10000 },
           { id: "amount-custom", label: "Custom Amount", isCustom: true },
         ];
       case "one-time":
       default:
         return [
-          { id: "amount-50000", label: "₹50,000", amount: 50000 },
-          { id: "amount-100000", label: "₹1,00,000", amount: 100000 },
-          { id: "amount-500000", label: "₹5,00,000", amount: 500000 },
-          { id: "amount-1000000", label: "₹10,00,000", amount: 1000000 },
+          { id: "amount-300", label: "₹300", amount: 300 },
+          { id: "amount-500", label: "₹500", amount: 500 },
+          { id: "amount-1000", label: "₹1000", amount: 1000 },
+          { id: "amount-2000", label: "₹2000", amount: 2000 },
           { id: "amount-custom", label: "Custom Amount", isCustom: true },
         ];
     }
@@ -266,7 +267,7 @@ export default function DonationForm() {
 
           <div className="space-y-2">
             <Label htmlFor="pan" className="text-sm font-medium text-gray-600">
-              PAN Number <span className="text-primary">*</span>
+              PAN Number
             </Label>
             <Input
               id="pan"
@@ -446,7 +447,7 @@ export default function DonationForm() {
             Make a Donation
           </h2>
           <p className="text-gray-500 text-sm sm:text-base">
-            Support our mission to empower society
+            Support our mission to restore health and hope for those in need
           </p>
         </div>
 
@@ -496,30 +497,30 @@ export default function DonationForm() {
                   htmlFor="termsAccepted"
                   className="text-xs sm:text-sm text-gray-600 cursor-pointer leading-relaxed"
                 >
-                  I agree to the{" "}
-                  <a
+                  I agree to the
+                  <Link
                     href="/termsandconditions"
                     target="_blank"
                     className="text-primary hover:underline"
                   >
                     Terms and Conditions
-                  </a>
-                  ,{" "}
-                  <a
+                  </Link>
+                  ,
+                  <Link
                     href="/privacypolicy"
                     target="_blank"
                     className="text-primary hover:underline"
                   >
                     Privacy Policy
-                  </a>{" "}
-                  and{" "}
-                  <a
+                  </Link>
+                  and
+                  <Link
                     href="/refundpolicy"
                     target="_blank"
                     className="text-primary hover:underline"
                   >
                     Refund Policy
-                  </a>
+                  </Link>
                 </Label>
                 {errors.termsAccepted && (
                   <p className="text-xs text-red-500 mt-1">

@@ -21,7 +21,7 @@
 - [x] About Section
 - [ ] Impact Section
 - [x] Statistics Section
-- [x] Team Section (page available at `/team`)
+- [x] Team Section (page available at `#team`)
 - [ ] Donate button with payment flow and Thank you pop-up
 - [x] Footer with contact and legal information
 

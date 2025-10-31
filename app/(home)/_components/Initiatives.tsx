@@ -8,7 +8,7 @@ export default function Initiatives() {
   return (
     <section id="initiatives" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-extrabold uppercase text-primary mb-16 text-center tracking-wider">
+        <h2 className="text-5xl font-extrabold uppercase text-primary mb-16 text-center tracking-wider">
           Our Programs: Punarjani Initiatives
         </h2>
 

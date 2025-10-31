@@ -9,7 +9,7 @@ export default function Stats() {
   return (
     <section id="stats" aria-labelledby="stats" className="py-12 sm:py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="text-4xl font-semibold mb-6 text-center text-primary">
+        <h1 className="text-5xl font-semibold mb-6 text-center text-primary">
           Our Impact at a Glance
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">

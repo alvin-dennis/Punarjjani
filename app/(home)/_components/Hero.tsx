@@ -24,7 +24,7 @@ export default function Hero() {
       className={cn(
         "relative w-full min-h-screen flex flex-col overflow-hidden"
       )}
-      id="#hero"
+      id="hero"
       aria-label="Hero section"
     >
       <Navbar />

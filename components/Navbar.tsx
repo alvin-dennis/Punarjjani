@@ -13,7 +13,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div id="#navbar" className="flex justify-center w-full py-6 px-4">
+    <div id="navbar" className="flex justify-center w-full py-6 px-4">
       <div className="flex items-center justify-between px-6 py-3 bg-white rounded-full shadow-lg w-full max-w-3xl relative z-10">
         <div className="flex items-center">
           <Link href="/" className="flex items-center">

@@ -128,44 +128,73 @@ export const stats: Stat[] = [
     { id: 3, value: 15, label: "medical camps providing free medical care and awareness" },
 ];
   
-export const team = [
-  {
-    id: 1,
-    name: "Dr. Ananya Rao",
-    role: "Medical Director",
-    bio: "Over 12 years of experience in community health programs, leading clinical teams and trainings.",
-    image: "https://placehold.co/400x400",
-    linkedin: "https://www.linkedin.com/",
-    email: "ananya@punarjjani.org",
-  },
-  {
-    id: 2,
-    name: "Rahul Sharma",
-    role: "Program Manager",
-    bio: "Coordinates outreach and logistics for mobile clinics and community drives.",
-    image: "https://placehold.co/400x400",
-    linkedin: "https://www.linkedin.com/",
-    email: "rahul@punarjjani.org",
-  },
-  {
-    id: 3,
-    name: "Ms. Latha Iyer",
-    role: "Volunteer Coordinator",
-    bio: "Builds and supports our volunteer network with training and resource allocation.",
-    image: "https://placehold.co/400x400",
-    linkedin: "https://www.linkedin.com/",
-    email: "latha@punarjjani.org",
-  },
-  {
-    id: 4,
-    name: "Amit Verma",
-    role: "Fundraising Lead",
-    bio: "Leads donor relations and fundraising initiatives to sustain our programs.",
-    image: "https://placehold.co/400x400",
-    linkedin: "https://www.linkedin.com/",
-    email: "amit@punarjjani.org",
-  },
-];
+export const team = {
+  advisors: [
+    {
+      id: 1,
+      name: "Dr. Baburaj",
+      role: "HOD, Anaesthetics",
+      image: "/assets/team/advisors/Dr.Baburaj.png",
+    },
+    {
+      id: 2,
+      name: "Dr. Janaki",
+      role: "Professor, Paediatrics",
+      image: "/assets/team/advisors/Dr.Janaki.png",
+    },
+    {
+      id: 3,
+      name: "Dr. Reshmi",
+      role: "Associate Professor, OBG",
+      image: "/assets/team/advisors/Dr.Resmy.png",
+    },
+    {
+      id: 4,
+      name: "Dr. Sarin",
+      role: "Associate Professor, Dermatology",
+      image: "/assets/team/advisors/Dr.Sarin.png",
+    },
+    {
+      id: 5,
+      name: "Dr. Sreekumar",
+      role: "HOD, Surgery",
+      image: "/assets/team/advisors/Dr.Sreekumar.png",
+    },
+  ],
+  executives: [
+    {
+      id: 1,
+      name: "Hanih",
+      role: "President",
+      image: "/assets/team/executives/Hanih.png",
+    },
+    {
+      id: 2,
+      name: "Medha",
+      role: "Vice President",
+      image: "/assets/team/executives/Medha.png",
+    },
+    {
+      id: 3,
+      name: "Aza",
+      role: "Secretary",
+      image: "/assets/team/executives/Aza.png",
+    },
+    {
+      id: 4,
+      name: "Sibhathulla",
+      role: "Joint Secretary",
+      image: "/assets/team/executives/Sibhathulla.png",
+    },
+    {
+      id: 5,
+      name: "Simil",
+      role: "Treasurer",
+      image: "/assets/team/executives/Simil.png",
+    },
+  ],
+};
+
 
 export const footer = {
   socials: [

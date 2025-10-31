@@ -5,6 +5,7 @@ import About from "@/app/(home)/_components/About";
 import Initiatives from "@/app/(home)/_components/Initiatives";
 import Stats from "@/app/(home)/_components/Stats";
 import Team from "@/app/(home)/_components/Team";
+import BackToTop from "@/components/BacktoTop";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -32,6 +33,9 @@ export default function Home() {
       <BlurFade delay={BLUR_FADE_DELAY * 10}>
         <Team />
       </BlurFade>
+      <div className="fixed z-10">
+        <BackToTop />
+      </div>
     </div>
   );
 }

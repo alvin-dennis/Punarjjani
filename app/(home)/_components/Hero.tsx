@@ -97,7 +97,7 @@ export default function Hero() {
               key={index}
               whileHover={{ scale: 1.05, y: -2 }}
               transition={{ duration: 0.3 }}
-              className="shrink-0 w-80 h-[480px] rounded-2xl shadow-lg cursor-pointer relative overflow-hidden"
+              className="shrink-0 w-100 h-[480px] rounded-2xl shadow-lg cursor-pointer relative overflow-hidden"
             >
               <Image
                 src={program.image}
@@ -110,7 +110,7 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/70" />
               <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-                <span className="text-white/80 uppercase tracking-widest text-sm">
+                <span className="text-white uppercase tracking-widest text-sm">
                   {program.category}
                 </span>
                 <h3 className="text-white text-2xl font-semibold leading-snug">

@@ -236,9 +236,9 @@ export const footer = {
       title: "Legal",
       links: [
         { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Use", href: "/terms" },
-        { name: "Donation Policy", href: "/donation-policy" },
-        { name: "Refund Policy", href: "/refund-policy" },
+        { name: "Terms of Use", href: "/termsandconditions" },
+        { name: "Donation Policy", href: "/donationpolicy" },
+        { name: "Refund Policy", href: "/refundpolicy" },
       ],
     },
   ],

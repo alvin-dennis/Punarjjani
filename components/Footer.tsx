@@ -20,11 +20,19 @@ export default function Footer() {
             <h2 className="text-xl font-semibold text-primary">Punarjjani</h2>
           </div>
 
-          <p className="max-w-[70%] text-sm text-muted-foreground text-center lg:text-left">
+          <p className="max-w-[70%] text-sm text-muted-foreground justify-center lg:justify-start text-center lg:text-left">
             Providing compassionate medical care to those in need — supporting
             underprivileged communities with essential healthcare, and restoring
             hope and dignity to vulnerable lives.
           </p>
+          <p className="max-w-[70%] text-sm text-muted-foreground justify-center lg:justify-start text-center lg:text-left">
+            Reg No.:TSR/TC/368/2017
+          </p>
+
+          <div className="items-center gap-1 text-sm text-muted-foreground lg:items-start">
+            <p>Email: <Link href="mailto:punarjjanitmc123@gmail.com" className="text-accent hover:underline">punarjjanitmc123@gmail.com</Link></p>
+            <p>Phone: <Link href="tel:+918078190629" className="text-accent hover:underline">+91 80781 90629</Link></p>
+          </div>
 
           <p className="text-sm font-semibold text-muted-foreground mt-4">
             Connect with us

@@ -133,7 +133,7 @@ export const team = {
     {
       id: 1,
       name: "Dr. Baburaj",
-      role: "HOD, Anaesthetics",
+      role: "HOD, Anaesthesia",
       image: "/assets/team/advisors/Dr.Baburaj.png",
     },
     {
@@ -164,7 +164,7 @@ export const team = {
   executives: [
     {
       id: 1,
-      name: "Hanih",
+      name: "Hanih PC",
       role: "President",
       image: "/assets/team/executives/Hanih.png",
     },

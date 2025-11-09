@@ -49,6 +49,8 @@ export default function Hero() {
             {subtitle}
           </p>
 
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-xl">Reg No.:TSR/TC/368/2017</p>
+
           {(primaryButton || secondaryButton) && (
             <div className="flex flex-col sm:flex-row items-center gap-4">
               {primaryButton && (

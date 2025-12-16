@@ -1,5 +1,5 @@
 import { NavItem, Stat, Social } from "@/lib/types";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
@@ -235,9 +235,7 @@ export const footer = {
     {
       title: "Legal",
       links: [
-        { name: "Privacy Policy", href: "/privacy" },
         { name: "Terms of Use", href: "/termsandconditions" },
-        { name: "Donation Policy", href: "/donationpolicy" },
         { name: "Refund Policy", href: "/refundpolicy" },
       ],
     },

@@ -1,16 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { navItems, ctaButton } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Link from "next/link";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
+import { useIsMobile } from "@/hooks/useisMobile";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [qrOpen, setQrOpen] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
+  const isMobile = useIsMobile();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!qrOpen) return;
+    const timer = setTimeout(() => {
+      setQrOpen(false);
+    }, 20000);
+    return () => clearTimeout(timer);
+  }, [qrOpen]);
+
+  const handleThankYou = () => {
+    toast.success("Thank you for donating!", { duration: 2500 });
+    setTimeout(() => {
+      router.push("/thank-you");
+    }, 2500);
+  };
+
+  const handleCtaClick = () => {
+    if (isMobile) {
+      toast.loading("Redirecting to Google Pay...", { duration: 2000 });
+      window.location.href = ctaButton.href;
+      setTimeout(() => handleThankYou(), 4000);
+    } else {
+      setQrOpen(true);
+    }
+  };
 
   return (
     <div id="navbar" className="flex justify-center w-full py-6 px-4">
@@ -46,7 +79,6 @@ export default function Navbar() {
             </motion.div>
           ))}
         </nav>
-
         <motion.div
           className="hidden md:block"
           initial={{ opacity: 0, x: 20 }}
@@ -54,13 +86,10 @@ export default function Navbar() {
           transition={{ duration: 0.3, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
         >
-          <Link href={ctaButton.href} passHref>
-            <Button variant={"default"} className="px-5 py-2">
-              <span>{ctaButton.label}</span>
-            </Button>
-          </Link>
+          <Button variant="default" className="px-5 py-2" onClick={handleCtaClick}>
+            <span>{ctaButton.label}</span>
+          </Button>
         </motion.div>
-
         <motion.button
           className="md:hidden flex items-center"
           onClick={toggleMenu}
@@ -108,27 +137,62 @@ export default function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="pt-6"
+                className="pt-6 w-full"
               >
-                <Link href={ctaButton.href} onClick={toggleMenu}>
-                  <Button
-                    variant={"default"}
-                    className="inline-flex w-full px-5 py-3 text-base rounded-full transition-colors"
-                  >
-                    <span>{ctaButton.label}</span>
-                  </Button>
-                </Link>
+                <Button
+                  variant="default"
+                  className="inline-flex w-full px-5 py-3 text-base rounded-full transition-colors"
+                  onClick={() => {
+                    toggleMenu();
+                    handleCtaClick();
+                  }}
+                >
+                  <span>{ctaButton.label}</span>
+                </Button>
               </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <Dialog open={qrOpen} onOpenChange={setQrOpen}>
+        <motion.div>
+          <DialogContent className="max-w-sm text-center">
+            <DialogHeader>
+              <DialogTitle>Scan to Donate</DialogTitle>
+            </DialogHeader>
+
+            <div className="flex flex-col items-center gap-4">
+              <Image
+                src="/assets/donate/qr.png"
+                alt="Donate QR Code"
+                width={220}
+                height={220}
+              />
+
+              <p className="text-sm text-muted-foreground">
+                Scan using GPay / any UPI app
+              </p>
+
+              <Button
+                variant={"default"}
+                className="mt-5 px-4 py-2"
+                onClick={() => {
+                  setQrOpen(false);
+                  handleThankYou();
+                }}
+              >
+                I&apos;ve completed the payment
+              </Button>
+            </div>
+          </DialogContent>
+        </motion.div>
+      </Dialog>
     </div>
   );
 }

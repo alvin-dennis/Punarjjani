@@ -47,7 +47,7 @@ export default function Hero() {
   }, [qrOpen]);
 
   const handleThankYou = () => {
-    toast.success("Thank you for donating!!", { duration: 2500 });
+    toast.success("Thank you for donating!", { duration: 2500 });
     setTimeout(() => {
       router.push("/thankyou");
     }, 2500);
@@ -181,7 +181,7 @@ export default function Hero() {
 
           <div className="flex flex-col items-center gap-4">
             <Image
-              src="/donate-qr.png"
+              src="/assets/donate/qr.png"
               alt="Donate QR Code"
               width={220}
               height={220}

@@ -10,7 +10,7 @@ export const navItems: NavItem[] = [
 
 export const ctaButton: NavItem = {
   label: "Donate",
-  href: "/donate",
+  href: `${process.env.DONATION_URL}`,
 };
 
 export const hero = {
@@ -19,7 +19,7 @@ export const hero = {
     "Providing compassionate medical care to those in need — supporting underprivileged communities with essential healthcare, and restoring hope and dignity to vulnerable lives.",
   primaryButton: {
     label: "Donate Now",
-    href: "upi://pay?pa=punarjjani022@dlb&pn=PUNARJJANI&cu=INR&mc=8641&orgid=159048",
+    href: `${process.env.DONATION_URL}`,
   },
   secondaryButton: {
     label: "View our initiatives",

@@ -19,7 +19,7 @@ export const hero = {
     "Providing compassionate medical care to those in need — supporting underprivileged communities with essential healthcare, and restoring hope and dignity to vulnerable lives.",
   primaryButton: {
     label: "Donate Now",
-    href: "/donate",
+    href: "upi://pay?pa=punarjjani022@dlb&pn=PUNARJJANI&cu=INR&mc=8641&orgid=159048",
   },
   secondaryButton: {
     label: "View our initiatives",

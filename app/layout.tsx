@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} ${nura.variable} font-monteserrat antialiased bg-muted`}
       >
+        <Toaster position="top-center" reverseOrder={true} />
         {children}
         <Footer />
       </body>

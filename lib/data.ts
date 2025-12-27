@@ -47,22 +47,12 @@ export const hero = {
       title: "₹30 Challenge",
     },
     {
-      image: "/assets/events/donation.webp",
-      category: "Donation",
-      title: "Hair Donation",
-    },
-    {
       image: "/assets/events/izha.webp",
       category: "Donation",
       title: "Izha",
     },
     {
       image: "/assets/events/anandham.webp",
-      category: "Event",
-      title: "Anandham",
-    },
-    {
-      image: "/assets/events/anandham1.webp",
       category: "Event",
       title: "Anandham",
     },
@@ -74,7 +64,7 @@ export const hero = {
     {
       image: "/assets/events/paediatrics.webp",
       category: "Event",
-      title: "Paediatrics Christmas",
+      title: "Paediatrics Celebration",
     },
     {
       image: "/assets/events/punarjjani-wtsp.webp",

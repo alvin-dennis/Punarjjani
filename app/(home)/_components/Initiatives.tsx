@@ -79,8 +79,17 @@ export default function Initiatives() {
               <p className="text-gray-600 text-justify grow text-base">
                 {project.description}
               </p>
+              {project.email && (
+                <a
+                  href={`mailto:${project.email}`}
+                  className="mt-4 text-sm font-semibold text-primary hover:underline"
+                >
+                  📧 {project.email}
+                </a>
+              )}
             </VercelCard>
           ))}
+
         </div>
 
         <div className="text-center mt-16">

@@ -31,7 +31,7 @@ export default function Footer() {
 
           <div className="items-center gap-1 text-sm text-muted-foreground lg:items-start">
             <p>Email: <Link href="mailto:punarjjanitmc123@gmail.com" className="text-accent hover:underline">punarjjanitmc123@gmail.com</Link></p>
-            <p>Phone: <Link href="tel:+918078190629" className="text-accent hover:underline">+91 80781 90629</Link></p>
+            <p>Phone: <Link href="https://wa.me/918078190629" className="text-accent hover:underline">+91 80781 90629</Link></p>
           </div>
 
           <p className="text-sm font-semibold text-muted-foreground mt-4">

@@ -86,8 +86,8 @@ export default function ThankYouPage() {
                             </p>
 
                             <ul className="mb-6 space-y-1 text-sm text-muted-foreground text-center">
-                                <li>• Donate your hair through Hair2Care wing</li>
-                                <li>• Donate clothes through Feathers Win</li>
+                                <li>• Donate your hair through Hair2Care Wing</li>
+                                <li>• Donate clothes through Feathers Wing</li>
                             </ul>
 
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">

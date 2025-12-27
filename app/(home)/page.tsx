@@ -4,6 +4,7 @@ import Hero from "@/app/(home)/_components/Hero";
 import About from "@/app/(home)/_components/About";
 import Initiatives from "@/app/(home)/_components/Initiatives";
 import Stats from "@/app/(home)/_components/Stats";
+import Testimonials from "@/app/(home)/_components/Testimonials";
 import Team from "@/app/(home)/_components/Team";
 import BackToTop from "@/components/BacktoTop";
 
@@ -31,6 +32,10 @@ export default function Home() {
       </BlurFade>
 
       <BlurFade delay={BLUR_FADE_DELAY * 10}>
+        <Testimonials />
+      </BlurFade>
+
+      <BlurFade delay={BLUR_FADE_DELAY * 12}>
         <Team />
       </BlurFade>
       <div className="fixed z-10">

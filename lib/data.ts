@@ -51,6 +51,36 @@ export const hero = {
       category: "Donation",
       title: "Hair Donation",
     },
+    {
+      image: "/assets/events/izha.webp",
+      category: "Donation",
+      title: "Izha",
+    },
+    {
+      image: "/assets/events/anandham.webp",
+      category: "Event",
+      title: "Anandham",
+    },
+    {
+      image: "/assets/events/anandham1.webp",
+      category: "Event",
+      title: "Anandham",
+    },
+    {
+      image: "/assets/events/haemophilia.webp",
+      category: "Event",
+      title: "World Haemophilia day Observation",
+    },
+    {
+      image: "/assets/events/paediatrics.webp",
+      category: "Event",
+      title: "Paediatrics Christmas",
+    },
+    {
+      image: "/assets/events/punarjjani-wtsp.webp",
+      category: "Event",
+      title: "Launch of Punarjjani WhatsApp Helpline",
+    },
   ],
   backgroundImage: "/assets/home/hero.webp",
 };
@@ -111,6 +141,7 @@ export const initiatives = [
     imageSrc: "/assets/initiatives/hair2care.png",
     description:
       "This wing has, and will continue to elevate the quality of life of warriors fighting with cancer by providing wigs free of cost with the hairs procured through voluntary hair donations.",
+    email: "hair2care2025@gmail.com",
   },
   {
     id: 7,
@@ -127,7 +158,50 @@ export const stats: Stat[] = [
     { id: 2, value: 450000, label: "worth of annual medical and charitable services" },
     { id: 3, value: 15, label: "medical camps providing free medical care and awareness" },
 ];
-  
+
+export const testimonials = [
+  {
+    name: "Dr. Ajayan P. V.",
+    role: "Department of ENT ",
+    exp: "Former Staff advisor",
+    image: "/assets/testimonials/ajayanpv.webp",
+    quote:
+      "It's been 20 years since I have been close to Punarjjani, then known as Pratheeksha. As an answer to the question of many - What is the purpose of Punarjjani for the students; in this era of highly dynamic doctor - patient relationship, the exposure to the society, as well as the patients of this society, that students get from this initiative is invaluable. Many are in the opinion that the education system in the past is better than the present. Even though I am not an alumni of this college, I would say the present education system is at its best at Thrissur Medical College. All my best wishes to Punarjjani.",
+  },
+  {
+    name: "Dr. Purushothaman",
+    role: "Department of Paediatrics",
+    exp: "Former staff adviser",
+    image: "/assets/testimonials/purushothaman.webp",
+    quote:
+      "I joined Thrissur Medical College as a teacher in August 1987, and over the years of teaching and medical practice, I was able to make lifelong friendships and memories with students. In the early 1990s, a senior colleague started the 'We Care Trust', of which I was also a part. Around 2003–2004, students launched Pratheeksha, embodying progressive ideas in medical education and service, many of whom later became leading figures in modern medicine. After a brief pause, Pratheeksha was reborn as Punarjjani and its activities expanded into other fields. In 2023, I was able to reconnect with the new generation of Punarjjani, and I enjoyed a lot spending time with them. My heartfelt wishes to Punarjjani.",
+  },
+  {
+    name: "Dr Sheela.T.A",
+    role: "Department of Paediatrics",
+    exp: "Former staff adviser",
+    image: "/assets/testimonials/sheela.webp",
+    quote:
+      "I am privileged to have been associated with Team Punarjani of GMC Thrissur as a staff advisor for several years. Their compassion-driven initiatives, especially in Paediatrics—such as Appoopanthadi, Chithrashalabham, and Pancharamuttayi—beautifully reflect how students become caring companions to children with chronic illnesses. May this spirit of empathy continue to grow and inspire,It has been truly heart-warming to collaborate with them and witness the diverse programs they have successfully conducted.",
+  },
+  {
+    name: "Dr Sujith Joseph Bunglavan",
+    role: "2002 Batch",
+    exp: "Former General secretary",
+    image: "/assets/testimonials/sujith.webp",
+    quote:
+      "PUNARJJANI, the charity wing of Government Medical College, Thrissur, truly demonstrates how compassionate care can transform lives.In the initial years starting as PRATHEEKSHA-A ray of Good Hope eventually transforming to PUNARJJANI and now growing beyond the boundaries we had set in during those days,the dedication of the students and doctors to support patients beyond hospital walls reflects a rare blend of medical excellence and humaneness.By mobilising resources, offering emotional support, and standing with families during their most difficult moments, PUNARJJANI has become a powerful example of community-driven healthcare in Kerala.",
+  },
+  {
+    name: "Dr. Anees Ismail",
+    role: "2015 Batch",
+    exp: "Former President",
+    image: "/assets/testimonials/anees.webp",
+    quote:
+      "Punarjani has been a constant light in my journey, shaping me not only into a better doctor but also into a more compassionate human being. Serving others through Punarjani touched my heart deeply, helping me grow emotionally and teaching me the true meaning of kindness and selfless service. Every experience reminded me why I chose medicine—to heal, to listen, and to stand by those in need. The lessons I learned here will stay with me forever, guiding both my personal life and my medical career.",
+  },
+];
+
 export const team = {
   advisors: [
     {
@@ -170,15 +244,15 @@ export const team = {
     },
     {
       id: 2,
-      name: "Medha",
-      role: "Vice President",
-      image: "/assets/team/executives/Medha.png",
-    },
-    {
-      id: 3,
       name: "Aza",
       role: "Secretary",
       image: "/assets/team/executives/Aza.png",
+    },
+    {
+      id: 3,
+      name: "Medha",
+      role: "Vice President",
+      image: "/assets/team/executives/Medha.png",
     },
     {
       id: 4,

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useAnimationFrame } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -52,6 +52,24 @@ export default function Hero() {
       router.push("/thankyou");
     }, 2500);
   };
+
+  const marqueeX = useMotionValue(0);
+
+  useAnimationFrame((_, delta) => {
+    const speed = 0.05;
+
+    const moveBy = delta * speed;
+    let current = marqueeX.get() - moveBy;
+
+    const singleSetWidth =
+      programs.length * 356 + programs.length * 24;
+
+    if (Math.abs(current) >= singleSetWidth) {
+      current = 0;
+    }
+
+    marqueeX.set(current);
+  });
 
   return (
     <section
@@ -135,14 +153,7 @@ export default function Hero() {
       <div className="relative z-10 lg:mt-20 w-full py-16 overflow-hidden">
         <motion.div
           className="flex gap-6 pl-6"
-          animate={{
-            x: [0, -((programs.length * 24 + programs.length * 356) / 2)],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: programs.length * 3,
-            ease: "linear",
-          }}
+          style={{ x: marqueeX }}
         >
           {[...programs, ...programs].map((program, index) => (
             <motion.div

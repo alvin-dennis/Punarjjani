@@ -167,7 +167,7 @@ export const testimonials = [
       "I joined Thrissur Medical College as a teacher in August 1987, and over the years of teaching and medical practice, I was able to make lifelong friendships and memories with students. In the early 1990s, a senior colleague started the 'We Care Trust', of which I was also a part. Around 2003–2004, students launched Pratheeksha, embodying progressive ideas in medical education and service, many of whom later became leading figures in modern medicine. After a brief pause, Pratheeksha was reborn as Punarjjani and its activities expanded into other fields. In 2023, I was able to reconnect with the new generation of Punarjjani, and I enjoyed a lot spending time with them. My heartfelt wishes to Punarjjani.",
   },
   {
-    name: "Dr Sheela.T.A",
+    name: "Dr. Sheela.T.A",
     role: "Department of Paediatrics",
     exp: "Former staff adviser",
     image: "/assets/testimonials/sheela.webp",
@@ -175,7 +175,7 @@ export const testimonials = [
       "I am privileged to have been associated with Team Punarjani of GMC Thrissur as a staff advisor for several years. Their compassion-driven initiatives, especially in Paediatrics—such as Appoopanthadi, Chithrashalabham, and Pancharamuttayi—beautifully reflect how students become caring companions to children with chronic illnesses. May this spirit of empathy continue to grow and inspire,It has been truly heart-warming to collaborate with them and witness the diverse programs they have successfully conducted.",
   },
   {
-    name: "Dr Sujith Joseph Bunglavan",
+    name: "Dr. Sujith Joseph Bunglavan",
     role: "2002 Batch",
     exp: "Former General secretary",
     image: "/assets/testimonials/sujith.webp",

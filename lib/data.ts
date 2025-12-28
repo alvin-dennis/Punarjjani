@@ -2,9 +2,9 @@ import { NavItem, Stat, Social } from "@/lib/types";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export const navItems: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Impact", href: "#pricing" },
-  { label: "Statistics", href: "#docs" },
+  { label: "About", href: "/#about" },
+  { label: "Initiatives", href: "/#initiatives" },
+  { label: "Statistics", href: "/#stats" },
   { label: "Team", href: "/team" },
 ];
 

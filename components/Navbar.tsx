@@ -31,7 +31,7 @@ export default function Navbar() {
   const handleThankYou = () => {
     toast.success("Thank you for donating!", { duration: 2500 });
     setTimeout(() => {
-      router.push("/thank-you");
+      router.push("/thankyou");
     }, 2500);
   };
 

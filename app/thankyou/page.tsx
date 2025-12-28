@@ -22,7 +22,7 @@ export default function ThankYouPage() {
                             You're Changing Lives Today
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty max-w-2xl mx-auto">
-                            Your donation is more than a gift—it's hope, opportunity, and real change for those who need it most.
+                            Your donation is more than a gift. It's hope, opportunity, and real change for those who need it most.
                             Together, we're building a better world for our community.
                         </p>
                     </div>

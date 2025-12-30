@@ -1,5 +1,5 @@
 import { NavItem, Stat, Social } from "@/lib/types";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const navItems: NavItem[] = [
   { label: "About", href: "/#about" },
@@ -271,6 +271,11 @@ export const footer = {
       label: "Instagram",
       href: "https://www.instagram.com/punarjjani_tmc",
       icon: FaInstagram,
+    },
+    {
+      label: "Whatsapp",
+      href: "https://whatsapp.com/channel/0029Vb6wuMBF1YlV2fJZXS1g",
+      icon: FaWhatsapp,
     },
   ] as Social[],
   sections: [

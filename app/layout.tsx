@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Toaster position="top-center" reverseOrder={true} />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

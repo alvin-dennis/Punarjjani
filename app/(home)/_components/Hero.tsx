@@ -107,22 +107,24 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               {primaryButton && (
                 isMobile ? (
-                  <Button
-                    variant="secondary"
-                    className="px-6 sm:px-8 md:px-10 py-4 text-lg"
+                  <Link
+                    href={primaryButton.href}
                     onClick={() => {
-                      toast.loading("Redirecting to Google Pay...", {
-                        duration: 2000,
-                      });
-                      window.location.href = primaryButton.href;
+                      toast.loading("Redirecting to Google Pay...", { duration: 2000 });
                       setTimeout(() => {
                         handleThankYou();
                       }, 4000);
                     }}
                   >
-                    {primaryButton.label}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                    <Button
+                      variant="secondary"
+                      className="px-6 sm:px-8 md:px-10 py-4 text-lg w-full"
+                      
+                    >
+                      {primaryButton.label}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 ) : (
                   <Button
                     variant="secondary"

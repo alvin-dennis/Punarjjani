@@ -6,7 +6,12 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { navItems, ctaButton } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -36,30 +41,30 @@ export default function Navbar() {
   };
 
   const handleCtaClick = () => {
-    if (isMobile) {
-      toast.loading("Redirecting to Google Pay...", { duration: 2000 });
-      window.location.href = ctaButton.href;
-      setTimeout(() => handleThankYou(), 4000);
-    } else {
+    if (!isMobile) {
       setQrOpen(true);
+      return;
     }
+
+    toast.loading("Redirecting to Google Pay...", { duration: 2000 });
+    setTimeout(() => {
+      setQrOpen(true);
+    }, 4000);
   };
 
   return (
     <div id="navbar" className="flex justify-center w-full py-6 px-4">
       <div className="flex items-center justify-between px-6 py-3 bg-white rounded-full shadow-lg w-full max-w-3xl relative z-10">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/assets/logo.svg"
-              alt="Punarjjani Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto md:h-12"
-              priority
-            />
-          </Link>
-        </div>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/assets/logo.svg"
+            alt="Punarjjani Logo"
+            width={120}
+            height={40}
+            className="h-10 w-auto md:h-12"
+            priority
+          />
+        </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
@@ -87,7 +92,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
         >
           <Button variant="default" className="px-5 py-2" onClick={handleCtaClick}>
-            <span>{ctaButton.label}</span>
+            {ctaButton.label}
           </Button>
         </motion.div>
         <motion.button
@@ -98,7 +103,6 @@ export default function Navbar() {
           <Menu className="h-6 w-6 text-gray-900" />
         </motion.button>
       </div>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -112,21 +116,17 @@ export default function Navbar() {
               className="absolute top-6 right-6 p-2"
               onClick={toggleMenu}
               whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
             >
               <X className="h-6 w-6 text-primary" />
             </motion.button>
 
-            <div className="flex flex-col space-y-6 items-center justify-center cursor-pointer">
+            <div className="flex flex-col space-y-6 items-center justify-center">
               {navItems.map((item, i) => (
                 <motion.div
                   key={item.label}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 + 0.1 }}
-                  exit={{ opacity: 0, x: 20 }}
                 >
                   <Link
                     href={item.href}
@@ -141,19 +141,33 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                exit={{ opacity: 0, y: 20 }}
                 className="pt-6 w-full"
               >
-                <Button
-                  variant="default"
-                  className="inline-flex w-full px-5 py-3 text-base rounded-full transition-colors"
-                  onClick={() => {
-                    toggleMenu();
-                    handleCtaClick();
-                  }}
-                >
-                  <span>{ctaButton.label}</span>
-                </Button>
+                {isMobile ? (
+                  <Link href={ctaButton.href}>
+                    <Button
+                      variant="default"
+                      className="w-full px-5 py-3 rounded-full"
+                      onClick={() => {
+                        toggleMenu();
+                        handleCtaClick();
+                      }}
+                    >
+                      {ctaButton.label}
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button
+                    variant="default"
+                    className="w-full px-5 py-3 rounded-full"
+                    onClick={() => {
+                      toggleMenu();
+                      handleCtaClick();
+                    }}
+                  >
+                    {ctaButton.label}
+                  </Button>
+                )}
               </motion.div>
             </div>
           </motion.div>
@@ -161,37 +175,35 @@ export default function Navbar() {
       </AnimatePresence>
 
       <Dialog open={qrOpen} onOpenChange={setQrOpen}>
-        <motion.div>
-          <DialogContent className="max-w-sm text-center">
-            <DialogHeader>
-              <DialogTitle>Scan to Donate</DialogTitle>
-            </DialogHeader>
+        <DialogContent className="max-w-sm text-center">
+          <DialogHeader>
+            <DialogTitle>Scan to Donate</DialogTitle>
+          </DialogHeader>
 
-            <div className="flex flex-col items-center gap-4">
-              <Image
-                src="/assets/donate/qr.png"
-                alt="Donate QR Code"
-                width={220}
-                height={220}
-              />
+          <div className="flex flex-col items-center gap-4">
+            <Image
+              src="/assets/donate/qr.png"
+              alt="Donate QR Code"
+              width={220}
+              height={220}
+            />
 
-              <p className="text-sm text-muted-foreground">
-                Scan using GPay / any UPI app
-              </p>
+            <p className="text-sm text-muted-foreground">
+              Scan using GPay / any UPI app
+            </p>
 
-              <Button
-                variant={"default"}
-                className="mt-5 px-4 py-2"
-                onClick={() => {
-                  setQrOpen(false);
-                  handleThankYou();
-                }}
-              >
-                I&apos;ve completed the payment
-              </Button>
-            </div>
-          </DialogContent>
-        </motion.div>
+            <Button
+              variant="default"
+              className="mt-5 px-4 py-2"
+              onClick={() => {
+                setQrOpen(false);
+                handleThankYou();
+              }}
+            >
+              I&apos;ve completed the payment
+            </Button>
+          </div>
+        </DialogContent>
       </Dialog>
     </div>
   );

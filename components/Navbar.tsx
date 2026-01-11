@@ -15,21 +15,16 @@ import {
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { useIsMobile } from "@/hooks/useisMobile";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [qrOpen, setQrOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const isMobile = useIsMobile();
   const router = useRouter();
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   useEffect(() => {
     if (!qrOpen) return;
-    const timer = setTimeout(() => {
-      setQrOpen(false);
-    }, 20000);
+    const timer = setTimeout(() => setQrOpen(false), 20000);
     return () => clearTimeout(timer);
   }, [qrOpen]);
 
@@ -41,15 +36,7 @@ export default function Navbar() {
   };
 
   const handleCtaClick = () => {
-    if (!isMobile) {
-      setQrOpen(true);
-      return;
-    }
-
-    toast.loading("Redirecting to Google Pay...", { duration: 2000 });
-    setTimeout(() => {
-      setQrOpen(true);
-    }, 4000);
+    setQrOpen(true);
   };
 
   return (
@@ -91,7 +78,7 @@ export default function Navbar() {
           transition={{ duration: 0.3, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
         >
-          <Button variant="default" className="px-5 py-2" onClick={handleCtaClick}>
+          <Button className="px-5 py-2" onClick={handleCtaClick}>
             {ctaButton.label}
           </Button>
         </motion.div>
@@ -143,31 +130,15 @@ export default function Navbar() {
                 transition={{ delay: 0.5 }}
                 className="pt-6 w-full"
               >
-                {isMobile ? (
-                  <Link href={ctaButton.href}>
-                    <Button
-                      variant="default"
-                      className="w-full px-5 py-3 rounded-full"
-                      onClick={() => {
-                        toggleMenu();
-                        handleCtaClick();
-                      }}
-                    >
-                      {ctaButton.label}
-                    </Button>
-                  </Link>
-                ) : (
-                  <Button
-                    variant="default"
-                    className="w-full px-5 py-3 rounded-full"
-                    onClick={() => {
-                      toggleMenu();
-                      handleCtaClick();
-                    }}
-                  >
-                    {ctaButton.label}
-                  </Button>
-                )}
+                <Button
+                  className="w-full px-5 py-3 rounded-full"
+                  onClick={() => {
+                    toggleMenu();
+                    handleCtaClick();
+                  }}
+                >
+                  {ctaButton.label}
+                </Button>
               </motion.div>
             </div>
           </motion.div>
@@ -189,11 +160,10 @@ export default function Navbar() {
             />
 
             <p className="text-sm text-muted-foreground">
-              Scan using GPay / any UPI app
+              Scan using any UPI app
             </p>
 
             <Button
-              variant="default"
               className="mt-5 px-4 py-2"
               onClick={() => {
                 setQrOpen(false);
